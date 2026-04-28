@@ -50,7 +50,7 @@ const ContactMeSection = () => {
   return (
     <FullScreenSection
       isDarkBackground
-      backgroundColor="#512DA8"
+      backgroundColor="#2A4365"
       py={16}
       spacing={8}
     >
@@ -69,6 +69,8 @@ const ContactMeSection = () => {
                   value={formik.values.firstName}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
+                  bg="white"
+                  color="black"
                 />
                 <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
               </FormControl>
@@ -81,12 +83,14 @@ const ContactMeSection = () => {
                   value={formik.values.email}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
+                  bg="white"
+                  color="black"
                 />
                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type" value={formik.values.type} onChange={formik.handleChange} onBlur={formik.handleBlur}>
+                <Select id="type" name="type" value={formik.values.type} onChange={formik.handleChange} onBlur={formik.handleBlur} bg="white" color="black">
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">Open source consultancy session</option>
                   <option value="other">Other</option>
@@ -101,6 +105,8 @@ const ContactMeSection = () => {
                   value={formik.values.comment}
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
+                  bg="white"
+                  color="black"
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
