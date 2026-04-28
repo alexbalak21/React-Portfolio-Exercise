@@ -26,9 +26,8 @@ const LandingSection = () => (
           alt={greeting}
           w="100%"
           h="100%"
-          objectFit="cover"
-          objectPosition="center top"
-          transform="scale(0.88)"
+          objectFit="contain"
+          objectPosition="center"
         />
       </Box>
       <Heading as="h1" size="2xl">{greeting}</Heading>
