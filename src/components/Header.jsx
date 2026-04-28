@@ -56,15 +56,39 @@ const Header = () => {
 
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  // Smooth scroll with configurable duration and header offset
+  const smoothScrollTo = (targetY, duration = 700) => {
+    const startY = window.pageYOffset;
+    const distance = targetY - startY;
+    let startTime = null;
 
-  const handleClick = (anchor) => () => {
+    const easeInOutCubic = (t) =>
+      t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const elapsed = timestamp - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = easeInOutCubic(progress);
+      window.scrollTo(0, startY + distance * eased);
+      if (elapsed < duration) {
+        window.requestAnimationFrame(step);
+      }
+    };
+
+    window.requestAnimationFrame(step);
+  };
+
+  const handleClick = (anchor, duration = 500) => (e) => {
+    e.preventDefault();
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+      const header = headerRef.current;
+      const headerHeight = header ? header.getBoundingClientRect().height : 0;
+      const elementY = element.getBoundingClientRect().top + window.pageYOffset;
+      const targetY = Math.max(elementY - headerHeight - 12, 0);
+      smoothScrollTo(targetY, duration);
     }
   };
 
