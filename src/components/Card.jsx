@@ -1,6 +1,4 @@
 import { Box, Heading, HStack, Image, Text, VStack } from "@chakra-ui/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
 const Card = ({ title, description, imageSrc }) => {
@@ -27,7 +25,7 @@ const Card = ({ title, description, imageSrc }) => {
           <Text fontSize="sm" fontWeight="medium">
             See more
           </Text>
-          <FontAwesomeIcon icon={faArrowRight} size="1x" />
+          <img src="/icons/arrow-right.svg" alt="" width="16" height="16" />
         </HStack>
       </VStack>
     </Box>

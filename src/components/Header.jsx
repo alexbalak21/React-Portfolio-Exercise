@@ -1,33 +1,30 @@
 import React, { useEffect, useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import {
-  faGithub,
-  faLinkedin,
-  faMediumM,
-  faStackOverflow,
-} from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
   {
-    icon: faEnvelope,
+    icon: "/icons/envelope.svg",
+    label: "Email",
     url: "mailto: alex@example.com",
   },
   {
-    icon: faGithub,
+    icon: "/icons/github.svg",
+    label: "GitHub",
     url: "https://github.com",
   },
   {
-    icon: faLinkedin,
+    icon: "/icons/linkedin.svg",
+    label: "LinkedIn",
     url: "https://www.linkedin.com",
   },
   {
-    icon: faMediumM,
+    icon: "/icons/medium.svg",
+    label: "Medium",
     url: "https://medium.com",
   },
   {
-    icon: faStackOverflow,
+    icon: "/icons/stack-overflow.svg",
+    label: "Stack Overflow",
     url: "https://stackoverflow.com",
   },
 ];
@@ -122,7 +119,7 @@ const Header = () => {
                   rel="noreferrer"
                   aria-label={`social-${idx}`}
                 >
-                  <FontAwesomeIcon icon={social.icon} size="2x" color="white" />
+                  <img src={social.icon} alt={social.label} width="32" height="32" />
                 </a>
               ))}
             </HStack>
