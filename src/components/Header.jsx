@@ -2,32 +2,13 @@ import React, { useEffect, useRef } from "react";
 import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
-  {
-    icon: "icons/envelope.svg",
-    label: "Email",
-    url: "mailto:pete@example.com",
-  },
-  {
-    icon: "icons/github.svg",
-    label: "GitHub",
-    url: "https://github.com",
-  },
-  {
-    icon: "icons/linkedin.svg",
-    label: "LinkedIn",
-    url: "https://www.linkedin.com",
-  },
-  {
-    icon: "icons/medium.svg",
-    label: "Medium",
-    url: "https://medium.com",
-  },
-  {
-    icon: "icons/stack-overflow.svg",
-    label: "Stack Overflow",
-    url: "https://stackoverflow.com",
-  },
+  { icon: "/React-Portfolio-Exercise/icons/envelope.svg", label: "Email", url: "mailto:pete@example.com" },
+  { icon: "/React-Portfolio-Exercise/icons/github.svg", label: "GitHub", url: "https://github.com" },
+  { icon: "/React-Portfolio-Exercise/icons/linkedin.svg", label: "LinkedIn", url: "https://www.linkedin.com" },
+  { icon: "/React-Portfolio-Exercise/icons/medium.svg", label: "Medium", url: "https://medium.com" },
+  { icon: "/React-Portfolio-Exercise/icons/stack-overflow.svg", label: "Stack Overflow", url: "https://stackoverflow.com" },
 ];
+
 
 const Header = () => {
   const headerRef = useRef();
