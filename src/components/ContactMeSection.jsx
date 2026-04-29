@@ -32,9 +32,9 @@ const ContactMeSection = () => {
       submit("/contact", values);
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required("Name is required"),
-      email: Yup.string().email("Invalid email address").required("Email is required"),
-      comment: Yup.string().min(25, "Message must be at least 25 characters").required("Message is required"),
+      firstName: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
+      comment: Yup.string().min(25, "Must be at least 25 characters").required("Required"),
     }),
   });
 
