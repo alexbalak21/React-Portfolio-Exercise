@@ -3,27 +3,27 @@ import { Box, HStack } from "@chakra-ui/react";
 
 const socials = [
   {
-    icon: "/icons/envelope.svg",
+    icon: "icons/envelope.svg",
     label: "Email",
-    url: "mailto: pete@example.com",
+    url: "mailto:pete@example.com",
   },
   {
-    icon: "/icons/github.svg",
+    icon: "icons/github.svg",
     label: "GitHub",
     url: "https://github.com",
   },
   {
-    icon: "/icons/linkedin.svg",
+    icon: "icons/linkedin.svg",
     label: "LinkedIn",
     url: "https://www.linkedin.com",
   },
   {
-    icon: "/icons/medium.svg",
+    icon: "icons/medium.svg",
     label: "Medium",
     url: "https://medium.com",
   },
   {
-    icon: "/icons/stack-overflow.svg",
+    icon: "icons/stack-overflow.svg",
     label: "Stack Overflow",
     url: "https://stackoverflow.com",
   },
