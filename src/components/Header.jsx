@@ -5,7 +5,7 @@ const socials = [
   {
     icon: "/icons/envelope.svg",
     label: "Email",
-    url: "mailto: alex@example.com",
+    url: "mailto: pete@example.com",
   },
   {
     icon: "/icons/github.svg",
