@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { Box, HStack } from "@chakra-ui/react";
 
+
 const socials = [
   { icon: "/React-Portfolio-Exercise/icons/envelope.svg", label: "Email", url: "mailto:pete@example.com" },
   { icon: "/React-Portfolio-Exercise/icons/github.svg", label: "GitHub", url: "https://github.com" },
